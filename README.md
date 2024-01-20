@@ -23,11 +23,11 @@ teams across 7 seasons, ideal for dimensionality reduction.
 
 The data has been scraped from an online source using Python, with code
 available in the [scraping
-folder](https://github.com/daniel-finnan/scraping/README.md) of this
-repository.
+folder](https://github.com/daniel-finnan/football_pca/blob/main/scraping/README.md)
+of this repository.
 
-This analysis is also available in [pdf
-format](https://github.com/daniel-finnan/football_pca/README.pdf).
+This analysis is available in [pdf
+format](https://github.com/daniel-finnan/football_pca/blob/main/README.pdf).
 
 First, we’ll load the libraries we need.
 

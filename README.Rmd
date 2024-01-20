@@ -4,16 +4,16 @@ author:  |
   | Daniel Finnan
   | [https://github.com/daniel-finnan/football_pca](https://github.com/daniel-finnan/football_pca)
 date: January 20, 2024
-output: pdf_document
+output: github_document
 ---
 
 This is a [Principal Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis) (PCA) intended to carry out an exploratory analysis of statistics from the Premier League. It uses data from the past 6 seasons, as well as the current unfinished 23/24 season. The goal (pun intended) is to discover links between the variables and identify similarities between the individuals. Data for the current season is dated 4 January, with all but four teams having played 20 games.
 
 The approach is based on data for a team in a given season, focused on long-term performance, rather than on a match-by-match basis. It includes variables from the league table, plus more detailed variables, such as the number of times a team has hit the woodwork, or number of own goals. In total, we have 38 quantitative variables covering 140 teams across 7 seasons, ideal for dimensionality reduction.
 
-The data has been scraped from an online source using Python, with code available in the [scraping folder](https://github.com/daniel-finnan/scraping/README.md) of this repository.
+The data has been scraped from an online source using Python, with code available in the [scraping folder](https://github.com/daniel-finnan/football_pca/blob/main/scraping/README.md) of this repository.
 
-This analysis is also available in [pdf format](https://github.com/daniel-finnan/football_pca/README.pdf).
+This analysis is available in [pdf format](https://github.com/daniel-finnan/football_pca/blob/main/README.pdf).
 
 First, we'll load the libraries we need.
 
