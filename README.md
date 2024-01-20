@@ -22,9 +22,12 @@ own goals. In total, we have 38 quantitative variables covering 140
 teams across 7 seasons, ideal for dimensionality reduction.
 
 The data has been scraped from an online source using Python, with code
-available in the [scraping folder](scraping/) of this repository.
+available in the [scraping
+folder](https://github.com/daniel-finnan/scraping/README.md) of this
+repository.
 
-This analysis is also available in [pdf format](README.pdf).
+This analysis is also available in [pdf
+format](https://github.com/daniel-finnan/football_pca/README.pdf).
 
 First, we’ll load the libraries we need.
 
@@ -731,8 +734,8 @@ ggplot(data = df, aes(x=component)) +
 ### Number of components
 
 We must decide on the number of principal components, $m$, to retain.
-There’s lots written on this part of the PCA methodology, so we’ll refer
-to an authority on the subject.
+There is a lot written on this part of the PCA methodology, so we’ll
+refer to an authority on the subject.
 
 “It is crucial to know how small $m$ can be taken without serious
 information loss,” according to I.T. Jolliffe, [Principal Component
@@ -1242,12 +1245,13 @@ fviz_pca_ind(result.pca,
   labs(title ="Supplementary individuals", x = "PC1", y = "PC2")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-30-1.png)<!-- --> Manchester
-City, Arsenal, Liverpool and Aston Villa are all located around teams
-from previous seasons classified as *Top 4*. Other teams sneak into the
-edges of the concentration ellipse, but these are placed in the overlap
-with *Top Half* teams and are also close to the overlap with *Bottom
-Half* teams.
+![](README_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+
+Manchester City, Arsenal, Liverpool and Aston Villa are all located
+around teams from previous seasons classified as *Top 4*. Other teams
+sneak into the edges of the concentration ellipse, but these are placed
+in the overlap with *Top Half* teams and are also close to the overlap
+with *Bottom Half* teams.
 
 Next, Brighton and Hove Albion, Tottenham, Newcastle United, Chelsea,
 Manchester United and Brentford find themselves in the *Top Half*

@@ -4,14 +4,14 @@ author:  |
   | Daniel Finnan
   | [https://github.com/daniel-finnan/football_pca](https://github.com/daniel-finnan/football_pca)
 date: January 20, 2024
-output: github_document
+output: pdf_document
 ---
 
 This is a [Principal Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis) (PCA) intended to carry out an exploratory analysis of statistics from the Premier League. It uses data from the past 6 seasons, as well as the current unfinished 23/24 season. The goal (pun intended) is to discover links between the variables and identify similarities between the individuals. Data for the current season is dated 4 January, with all but four teams having played 20 games.
 
 The approach is based on data for a team in a given season, focused on long-term performance, rather than on a match-by-match basis. It includes variables from the league table, plus more detailed variables, such as the number of times a team has hit the woodwork, or number of own goals. In total, we have 38 quantitative variables covering 140 teams across 7 seasons, ideal for dimensionality reduction.
 
-The data has been scraped from an online source using Python, with code available in the [scraping folder](https://github.com/daniel-finnan/README.pdf) of this repository.
+The data has been scraped from an online source using Python, with code available in the [scraping folder](https://github.com/daniel-finnan/scraping/README.md) of this repository.
 
 This analysis is also available in [pdf format](https://github.com/daniel-finnan/football_pca/README.pdf).
 
@@ -412,7 +412,7 @@ ggplot(data = df, aes(x=component)) +
 
 ### Number of components
 
-We must decide on the number of principal components, $m$, to retain. There's lots written on this part of the PCA methodology, so we'll refer to an authority on the subject.
+We must decide on the number of principal components, $m$, to retain. There is a lot written on this part of the PCA methodology, so we'll refer to an authority on the subject.
 
 "It is crucial to know how small $m$ can be taken without serious information loss," according to I.T. Jolliffe, [Principal Component Analysis](https://link.springer.com/book/10.1007/978-1-4757-1904-8). There are various rules or guidelines.
 
@@ -660,6 +660,7 @@ fviz_pca_ind(result.pca,
              ) +
   labs(title ="Supplementary individuals", x = "PC1", y = "PC2")
 ```
+
 Manchester City, Arsenal, Liverpool and Aston Villa are all located around teams from previous seasons classified as *Top 4*. Other teams sneak into the edges of the concentration ellipse, but these are placed in the overlap with *Top Half* teams and are also close to the overlap with *Bottom Half* teams.
 
 Next, Brighton and Hove Albion, Tottenham, Newcastle United, Chelsea, Manchester United and Brentford find themselves in the *Top Half* category. We notice that Brighton and Tottenham appear to be breaking new teritory in their placement in the upper echelons of the ellipse compared to past seasons given their placement on *PC2*. We interpreted *PC2* as *Misconduct* earlier and if we look at the number of cards they've been given, they've both got more than 50 *Yellow Cards*, the fourth and fifth most in the season so far. In terms of *Red Cards*, Tottenham is joint top with the most players sent off, while Brighton is joint third. However, the other teams with most *Red Cards*, Burnley and Liverpool aren't as high up on *PC2*, perhaps undermining our interpretation of this component.
