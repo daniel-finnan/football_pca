@@ -1,0 +1,10 @@
+geckodriver.log
+/__pycache__
+/scraping/__pycache__
+/scraping/stats_html
+/scraping/stats_pkl
+/scraping/tables_html
+/scraping/tables_pkl
+pl_data.csv
+.env
+
